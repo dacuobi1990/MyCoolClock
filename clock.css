@@ -1,0 +1,185 @@
+.clock-border {
+		width: 375px;
+		background-color: #f3f3f3;
+		height: 125px;
+		padding: 40px;
+		position: relative;
+		margin: 0 ;
+		box-shadow: 
+	}
+	.clock-border:after {
+		position: absolute;
+		width: 100%;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+		top: 100%;
+		left: 0px;
+		content:'';
+		height:2px;
+		z-index: -1;
+	}
+	.clock-inner {
+		background-color: #dddddd;
+		border-radius: 0.4em;
+		height: 100%;
+		padding: 0;
+		position: relative;
+	}
+	.clock-inner > div.digit:first-of-type {
+		margin-left: 71px;	
+	}
+	.digit {
+		width: 28px;
+		height: 50px;
+		position: relative;
+		display: inline-block;
+	}
+	.digit .d1 {	
+		height: 5px;
+		width: 16px;
+		top: 0px;
+		left: 6px;
+	}
+	.digit .d2 {
+		height: 5px;
+		width: 16px;
+		top: 24px;
+		left: 6px;
+	}
+	.digit .d3 {
+		height: 5px;
+		width: 16px;
+		top: 48px;
+		left: 6px;
+	}
+	.digit .d4 {
+		height: 14px;
+		width: 5px;
+		top: 7px;
+		left: 0px;
+	}
+	.digit .d5 {
+		height: 14px;
+		width: 5px;
+		top: 7px;
+		left: 22px;
+	}
+	.digit .d6 {
+		height: 14px;
+		width: 5px;
+		top: 32px;
+		left: 0px;
+	}
+	.digit .d7 {
+		height: 14px;
+		width: 5px;
+		top: 32px;
+		left: 22px;
+	}
+	.digit span {
+		background-color: #454545;
+		position: absolute;
+		border-color: #454545;
+	}
+ 	span:before,
+ 	span:after{
+		content:'';
+		position:absolute;
+		width:0;
+		height:0;
+		border:5px solid transparent;
+	}
+ 	.digit .d1:before{	border-width:0 5px 5px 0;border-right-color:inherit;left:-5px;}  /* zhijiao zai you shang */
+ 	.digit .d1:after{	border-width:0 0 5px 5px;border-left-color:inherit;right:-5px;}  /* zhijiao zai zuo shang */
+    .digit .d2:before{	border-width:3px 4px 2px;border-right-color:inherit;left:-8px;}
+    .digit .d2:after{	border-width:3px 4px 2px;border-left-color:inherit;right:-8px;}
+    .digit .d3:before{	border-width:5px 5px 0 0;border-right-color:inherit;left:-5px;}
+    .digit .d3:after{	border-width:5px 0 0 5px;border-left-color:inherit;right:-5px;}
+    .digit .d4:before{	border-width:0 5px 5px 0;border-bottom-color:inherit;top:-5px;}
+    .digit .d4:after{	border-width:0 0 5px 5px;border-left-color:inherit;bottom:-5px;}
+    .digit .d5:before{	border-width:0 0 5px 5px;border-bottom-color:inherit;top:-5px;}
+    .digit .d5:after{	border-width:5px 0 0 5px;border-top-color:inherit;bottom:-5px;}
+    .digit .d6:before{	border-width:0 5px 5px 0;border-bottom-color:inherit;top:-5px;}
+    .digit .d6:after{	border-width:0 0 5px 5px;border-left-color:inherit;bottom:-5px;}
+    .digit .d7:before{	border-width:0 0 5px 5px;border-bottom-color:inherit;top:-5px;}
+    .digit .d7:after{	border-width:5px 0 0 5px;border-top-color:inherit;bottom:-5px;}
+    
+    div.dots {
+		width:5px;
+		height: 50px;
+		display: inline-block;
+		position: relative;
+	}
+	
+    div.dots:before,
+    div.dots:after {
+		width:5px;
+		height:5px;
+		content:'';
+		position:absolute;
+		left:0;
+		background-color: #454545;
+		top:14px;
+    }
+    div.dots:after{
+		top:34px;
+    }
+
+    .digit.zero .d2,
+    .digit.one .d1,.digit.one .d2,.digit.one .d3,.digit.one .d4,.digit.one .d6,
+    .digit.two .d4,.digit.two .d7,
+    .digit.three .d4,.digit.three .d6,
+    .digit.four .d1,.digit.four .d3,.digit.four .d6,
+    .digit.five .d5,.digit.five .d6,
+    .digit.six .d5,
+    .digit.seven .d2,.digit.seven .d3,.digit.seven .d4,.digit.seven .d6,
+    .digit.nine .d6{
+		border-color:transparent;
+		background-color: transparent;
+    }
+
+    div.dots ,div.digit {
+    	margin: 20px 0;
+    }
+
+    ul.week {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+ 		height: 20px;
+ 		font-family: Arial;
+ 		font-size: 12px;
+ 		text-align: center;
+    }
+    ul.week li {
+    	display: inline-block;
+    	margin: 10px 10px;
+    	color: #B1B1B1;
+    	text-shadow :0 1px 3px white;
+    	text-shadow :0 -1px 3px white;
+    	text-shadow :1px 0 3px white;
+    	text-shadow :-1px 0 3px white;
+    }
+    ul.week li.active {
+    	color: #505050;
+    }
+    .iclock {
+    	background-image: url(alarm_light.jpg);
+    	position: absolute;
+ 		left: 32px;
+ 		top: 76px;
+ 		height: 16px;
+ 		width: 16px;
+    }
+    .apm {
+    	color: #505050;
+    	text-shadow :0 1px 3px white;
+    	text-shadow :0 -1px 3px white;
+    	text-shadow :1px 0 3px white;
+    	text-shadow :-1px 0 3px white;
+    	font-weight: bold;
+    	font-family: Arial;
+ 		font-size: 12px;
+ 		position: absolute;
+ 		left: 324px;
+ 		top: 79px;
+    }
